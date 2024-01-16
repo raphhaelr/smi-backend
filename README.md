@@ -22,6 +22,11 @@ $ cd smi-backend
 $ npm install
 ```
 
+#### Configurando o banco de dados (MongoDB)
+```sh
+$ docker compose up -d
+```
+
 #### Configurando o Backend
 ```sh
 $ Criar um arquivo .env 
