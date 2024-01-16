@@ -36,7 +36,6 @@ app.register(helmet, (instance) => {
   return {
     contentSecurityPolicy: {
       directives: {
-        ...helmet.contentSecurityPolicy.getDefaultDirectives(),
         'form-action': ["'self'"],
         'img-src': ["'self'", 'data:', 'validator.swagger.io'],
         'script-src': ["'self'"].concat(instance.swaggerCSP.script),
