@@ -22,7 +22,7 @@ app.register(swagger, {
 })
 
 app.register(swaggerUi, {
-  routePrefix: '/documentation',
+  routePrefix: '/api/documentation',
   staticCSP: true,
 })
 
