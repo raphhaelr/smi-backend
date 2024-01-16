@@ -37,3 +37,9 @@ $ Definir as variáveis NODE_ENV e MONGO_URI como no exemplo .env.example
 ```sh
 $ npm run dev
 ```
+
+#### Documentação Swagger
+```sh
+$ Acessar /documentation na URL da API
+$ ex: http://localhost:3333/documentation
+```
