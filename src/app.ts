@@ -3,6 +3,7 @@ import { routes } from './routes'
 import cors from '@fastify/cors'
 import swagger from '@fastify/swagger'
 import swaggerUi from '@fastify/swagger-ui'
+import helmet from '@fastify/helmet'
 
 export const app = Fastify()
 
@@ -30,5 +31,7 @@ app.register(swaggerUi, {
   routePrefix: '/api/documentation',
   staticCSP: true,
 })
+
+app.register(helmet)
 
 app.register(routes, { prefix: '/api' })
