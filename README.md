@@ -43,3 +43,11 @@ $ npm run dev
 $ Acessar /documentation na URL da API
 $ ex: http://localhost:3333/documentation
 ```
+
+### :zap: Acesso ao exemplo
+
+O projeto exemplo está hospedado na AWS em um servidor EC2
+
+- [Frontend](http://ec2-3-145-145-251.us-east-2.compute.amazonaws.com/)
+- [Backend](http://ec2-3-145-145-251.us-east-2.compute.amazonaws.com/api)
+- [Documentação](http://ec2-3-145-145-251.us-east-2.compute.amazonaws.com/api/documentation)
