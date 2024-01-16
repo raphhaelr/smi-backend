@@ -21,14 +21,14 @@ app.register(swagger, {
   },
 })
 
-app.register(swaggerUi, {
-  routePrefix: '/api/documentation',
-  staticCSP: true,
-})
-
 app.register(cors, {
   origin: '*',
   credentials: true,
+})
+
+app.register(swaggerUi, {
+  routePrefix: '/api/documentation',
+  staticCSP: true,
 })
 
 app.register(routes, { prefix: '/api' })
