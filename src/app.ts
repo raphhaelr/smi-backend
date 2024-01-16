@@ -27,26 +27,29 @@ app.register(cors, {
   credentials: true,
 })
 
-app.register(swaggerUi, {
-  routePrefix: '/api/documentation',
-  staticCSP: true,
-})
-
 app.register(helmet, (instance) => {
   return {
     contentSecurityPolicy: {
       directives: {
-        'form-action': ["'self'"],
-        'img-src': ["'self'", 'data:', 'validator.swagger.io'],
-        'script-src': ["'self'"].concat(instance.swaggerCSP.script),
-        'style-src': ["'self'", 'https:'].concat(instance.swaggerCSP.style),
+        defaultSrc: ["'self'"],
+        scriptSrc: ["'self'", "'unsafe-inline'", "'unsafe-eval'"],
+        // Add more directives as needed based on your application requirements
+        // ...
+
+        // Allow 'Origin-Agent-Cluster' header
         frameAncestors: [
           "'self'",
           'http://ec2-3-145-145-251.us-east-2.compute.amazonaws.com',
         ],
+        // Include other relevant directives here
       },
     },
   }
+})
+
+app.register(swaggerUi, {
+  routePrefix: '/api/documentation',
+  staticCSP: true,
 })
 
 app.register(routes, { prefix: '/api' })
