@@ -31,4 +31,4 @@ app.register(cors, {
   credentials: true,
 })
 
-app.register(routes)
+app.register(routes, { prefix: '/api' })
