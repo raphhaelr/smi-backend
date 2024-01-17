@@ -1,16 +1,17 @@
-
-version: '3'
+version: '3.1'
 
 services:
   mongodb:
-    image: mongo:6-jammy
+    image: mongo:latest
+    container_name: my_mongodb
     ports:
-      - '27017:27017'
-    extra_hosts:
-      "host.docker.internal": host-gateway
+      - "27017:27017"
     volumes:
-      - dbdata6:/data/db
-volumes:
-  dbdata6:
+      - mongodb_data:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: smi_root
+      MONGO_INITDB_ROOT_PASSWORD: f42d699ffe20204ec97387ce592aaca6
+      MONGO_INITDB_DATABASE: smi_engineering
 
-  
+volumes:
+  mongodb_data:
