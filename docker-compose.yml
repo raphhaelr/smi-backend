@@ -14,6 +14,9 @@ services:
       MONGO_INITDB_ROOT_USERNAME: smi_root
       MONGO_INITDB_ROOT_PASSWORD: f42d699ffe20204ec97387ce592aaca6
       MONGO_INITDB_DATABASE: smi_engineering
+      MONGODB_USER: smi_user
+      MONGODB_DATABASE: smi_engineering
+      MONGODB_PASS: f42d699ffe20204ec97387ce592aaca6
 
 volumes:
   mongodb_data:
