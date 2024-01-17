@@ -3,7 +3,7 @@ version: '3.1'
 services:
   mongodb:
     image: mongo:latest
-    container_name: my_mongodb
+    container_name: mongodb_smi
     ports:
       - "27017:27017"
     extra_hosts:
